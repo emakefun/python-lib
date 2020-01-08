@@ -1,97 +1,89 @@
-Mu 与 Magic:bit
+# Mu  and  Magic:bit
 
-## 什么是Mu ？
-Mu 是一款简单的python集成开发环境，可以帮助用户编译一些控制器和处理器，该软件功能界面简单，打开软件以后可以选择四个模式编辑，支持 PYTHON 3、Pygame Zero、 BBC MICRO: BT、 ADAFRUIT CIRCUITPYTHON，选择一个模式就可以进入到编辑界面，可以直接在软件上编辑代码，也可以通过加载.PY或者是.hex文件到软件上调试，功能非常实用！并且软件提供了一个图形调试器工具。适合中小学生Python学习者。
+## What is the Mu ？
+Mu is a simple python integrated development environment, can help the user to compile some controller and processor, the function of software interface is simple, open the software can choose four modes after editing, support for python 3, Pygame Zero, the BBC MICRO: BIT, ADAFRUIT CIRCUITPYTHON, choose a mode can into the editing interface, you can directly edit the code in the software, can also by loading. PY or. Hex file to the software debugging, very practical!And the software provides a graphical debugger tool.Suitable for primary and secondary students Python learners.
 
-## Mu 下载安装
-Mu下载安装方便，用户可以直接通过   [Mu官网](https://codewith.mu/en/download)  下载适合自己电脑的Mu版本，具体安装过程如图所示                                                                        											![windows_mu_installer.gif](Mu_python/windows_mu_installer.gif)
+## Mu download and install
+Mu  Easy to download and install, users can directly through   [Mu  official website](https://codewith.mu/en/download)  Download the version of Mu suitable for your computer, the specific installation process is shown in the figure                                                                       											![windows_mu_installer.gif](Mu_python/windows_mu_installer.gif)
 
-如果需要了解详细的安装说明，可以登录  [Mu安装](https://codewith.mu/en/howto/) 学习
+If you need detailed installation instructions, you can log in  [Mu install](https://codewith.mu/en/howto/) 
 
-## Mu 的 BBC micro:bit 模式
+## Mu's BBC  micro:bit model
 
-’‘模式“按钮可以选择相应的编辑模式，在为micro:bit主板编程时，应选择BBC microbit 。
+- 'Mode' The button can select the corresponding editing mode, and BBC microbit should be selected when programming the micro:bit motherboard 。
+- 'New' The button creates a new programming file to write a python control for micro:bit
+- 'Load' The button is used to load the already saved.py file on your computer.Note: after installing Mu, click load and write down the loaded file path, which is the storage path of the microbit library files in the computer. In the future study, micro:bit will be added to the library many times, and this path is needed to put the library in the fixed position of the computer
+- 'Save' A button is used to save a modified or newly created file
+- 'Flash' The button downloads Python code to the connected micro:bit (the indicator light on the microbit motherboard "flashes" to indicate that you are downloading Python programs to micro:bit).When the micro:bit motherboard indicator flashes, the motherboard is also deleting the previously downloaded programs.If the downloaded code contains an error, the micro:bit screen scrolls the error message.The blinking process takes about 10 seconds, as shown below：![microbit_flash](Mu_python/microbit_flash_en.gif)
+- 'Files' Buttons make it easy to access, place, get, and delete files on the device.As shown in the following figure, clicking file opens two panes between the text editor and the footer of the Mu.The left pane lists all files on micro:bit, and the right pane lists files on your computer with mu_code.Drag files between each file to copy them.To Delete a file on micro: bit, right-click it and select "Delete"。![microbit_files](Mu_python/microbit_files_en.gif)  Note: if you click on the file and an error is prompted, you can re-insert the microbit motherboard and re-open Mu, or enter "import microbit" in the code area, and then click "swipe in" to open the file again.
+- 'REPL' The button creates a new pane between the text editor and the Mu footer, connecting to the MicroPythonREPL about the micro:bit device.The word "REPL" is an acronym that stands for "Read, Value, print, loop," and it succinct description of what the panel does for you.It reads the interactive lines of Python you type, calculates the meaning of the code, outputs whatever results it provides you, and loops back to wait for your next Python instruction.![microbit_repl](Mu_python/microbit_repl_en.gif)
+As you can see from the example above, using a MicroPython REPL is like talking to a micro: bit in Python.Anything you can do in a regular Python script can be done in REPL.This is an interesting way to explore MicroPython's capabilities on micro: BIT.Go and play!(hint: there are plenty of Easter eggs built into microPython: bit....Can you find them?
+- 'Plotter' The button opens the Mu plotter.If your micro: bit outputs digital tuples over a serial connection, the plotter displays them as a graph.This is useful for visualizing any data that you might measure through the micro: bit.For more information, read [Moo's plotter tutorial](https://codewith.mu/en/tutorials/1.0/plotter).
+- 'Zoom-in' and 'Zoom-out' The function of the button is to enlarge and reduce the size of the code, you can adjust the size of the code font as needed
+- 'Theme' The button is used to adjust the programming theme style of Mu, and can be clicked to switch between different background themes
+- 'Check' The button is used to detect errors in the code. During the programming process, the button can be used to check the general errors, and the micro:bit screen can also be swiped-in to check the code in more detail
+- 'Tidy' Buttons are used to adjust the aesthetics of the entire program
+- 'Help' The button can enter the official Mu website to find more detailed software information
+- 'Quit' The button is used to exit the software
 
-”新建“按钮可以新建编程文件，用来为micro:bit编写python控制程序
+## Write micro:bit program
+- Click the 'Mode' button and select BBC microbit mode (this step can be ignored if BBC microbit mode is already selected when you open the software)
+- Click the 'New' button, create a new write file, and write the corresponding micro:bit program
+- Click the 'Save' button to save the micro:bit program to the corresponding location (if it is only a temporary test program, it can be saved)
+- Click the 'Check' button to check for routine errors.When the program is downloaded, if the program is wrong, the micro:bit screen will also display an error message
+- Click the 'Flash' button to download the programmed micro:bit program to the micro:bit motherboard. The micro:bit motherboard indicator flashes to indicate that the program is being downloaded. When the flashing ends, if there is no error message on the micro:bit screen, the program downloads successfully.
 
-”加载“按钮是用来加载电脑中已经保存好的 .py 文件。注意：在安装好Mu后，点击加载，记下加载的文件路径，这个路径就是microbit库文件在电脑的存放路径，在往后的学习中，会多次micro:bit添加库，需要用到该路径把库 放到电脑的这个固定位置
+## Add the Magic: bit library
 
-”保存“按钮是用来保存修改过或新建的文件
+-  Where are my program files?People can easily lose their code sometimes, so the default file location of Mu is always mu_code, how do you find the path of mu_code?When the Mu is installed, click the "load" button, and the file path of mu_code will be loaded. Remember this path. If you need to add the library in the future study, put it in the location of this path on the computer (the path of each computer will be slightly different).
 
-“刷入”按钮将Python代码下载到连接的micro:bit上(microbit主板的指示灯“闪烁”表示正在下载python程序到micro:bit上)。当micro:bit主板指示灯闪烁时，主板也在删除之前下载的程序。如果下载的代码包含一个错误，micro:bit屏幕会滚动显示错误信息。闪烁的过程大约需要10秒，如下所示：![microbit_flash](Mu_python/microbit_flash_en.gif)
+   ![mu_package_1](Mu_python/mu_package_1.png) Click the "Load" button
 
-“文件”按钮可以方便地访问、放置、获取和删除设备上的文件。如下图所示，单击“文件”会在文本编辑器和Mu的页脚之间打开两个窗格。左边的窗格列出micro:bit上的所有文件，右边的窗格列出mu_code你电脑上的文件。在每个文件之间拖动文件以复制它们。若要删除micro：bit上的文件，请右击它并选择“Delete”。![microbit_files](Mu_python/microbit_files_en.gif) 注意：如果点击文件，提示错误，可以重新插拔microbit主板以及重新打开Mu，或者 在代码区输入”import microbit“，然后点击刷入，再次打开文件。 
+   ![mu_package_2](Mu_python/mu_package_2.png)  
 
-“REPL”按钮在文本编辑器和Mu的页脚之间创建一个新窗格，连接到MicroPythonREPL关于micro:bit装置。“REPL”这个词是一个缩略语，代表“Read，Value，print，循环”，它简洁地描述了面板为您做了什么。它读取您键入的Python的交互式行，计算这些代码的含义，输出它为您提供的任何结果，然后循环返回以等待您的下一个Python指令。![microbit_repl](Mu_python/microbit_repl_en.gif)
-从上面的示例中可以看到，使用MicroPython的REPL就像与Python中的micro：bit进行对话一样。在常规Python脚本中可以做的任何事情，都可以在REPL中完成。这是一种有趣的方法，可以有趣地探索MicroPython在微：BIT上的功能。去吧，玩玩吧！(提示：microPython中内置了大量的复活节彩蛋：bit…。你能找到他们吗？)
+Write down the mu code path
 
-“绘图仪”按钮打开了Mu的绘图仪。如果您的micro：bit是通过串行连接输出数字元组，绘图仪将显示它们为一个图形。这对于可视化您可能通过微：位测量的任何数据是非常有用的。有关更多信息，请阅读[穆氏绘图仪教程](https://codewith.mu/en/tutorials/1.0/plotter).
+- Copy and paste the Magic:bit library file into the mu_code file, as shown below
 
-”放大“和”缩小“按钮的作用是用来放大和缩小代码的大小，可以根据需要来调整代码字体的大小
+![mu_package_3](Mu_python/mu_package_3.png)
 
-”主题“按钮是用来调整Mu的编程主题风格，可以点击切换不同的背景主题
+- Open Mu software, click on the "file" button, drag and drop, the computer files in the drag and drop to the BBC micro: bit, when micro: bit the mainboard of the end of the indicator lights flashing, said Magic: bit library files have been added to the micro: bit the mainboard, can pass the    from Magicbit import *    to use the Magicbit library, it is important to note that at the time of call library to ensure Magicbit library within microbit motherboard,Because microbit library files don't last forever after a single download.
 
-"检查"按钮是用来检测代码的错误的，在编程程序的过程中，可以通过该按钮检查常规错误，也可以通过刷入后micro:bit屏幕有无提示以及提示信息来更详细的检查代码
+## The onboard passive buzzer plays music
+Magic:bit contains a passive buzzer (connected to micro:bit motherboard P0 pin by default via jumper cap). You can control this passive buzzer to play music by writing corresponding programs on micro:bit motherboard. Before writing micropython control program through Mu, you need to know the python programming language of microbit control music [English version](https://microbit-micropython.readthedocs.io/en/latest/tutorials/music.html)
+Routine experiment: controlled Magic:bit interval 1S to play FUNK music ![mu_Magicbit_music](Mu_python/mu_music.png) 
 
-”Tidy“按钮是用来调整整个程序的美观性的
+## Magic:bit onboard RGB lights flash
+Magic:bit board is equipped with 4 RGB full color lights (connected to micro:bit motherboard P16 pins by default). These 4 RGB full color lights can be controlled by programming the micro:bit motherboard  [English version](https://microbit-micropython.readthedocs.io/en/latest/neopixel.html) Learn more about how to control RGB lights
+Routine experiment: control Magic:bit on-board RGB lamp flashing ![mu_Magicbit_RGB](Mu_python/mu_Magicbit_RGB.png)
 
-”帮助“按钮可以进入Mu官方网站，寻找更详细的软件资料
+## Magic:bit controls motor rotation
 
-”退出“按钮是用来退出Mu软件
+Magic:bit is designed with four dc motor interfaces M1, M2, M3 and M4, which can load the Magic:bit library and control the dc motor rotation through the Magic:bit expansion board.
+Routine experiment: control the rotation of four dc motors. The routine program is shown in the figure ![mu_Magicbit_motor](Mu_python/mu_Magicbit_motor.png)
 
-## Mu 编写micro:bit程序
-1、点击”模式“按钮，选择BBC microbit 模式（如果打开软件的时候已经选择BBC microbit模式，此步骤可以忽略)
-2、点击"新建"按钮，新建编写文件，编写相应的micro:bit程序
-3、点击“保存”按钮，把编写的micro:bit程序保存到相应位置（如果仅仅是临时测试程序可以不用保存）
-4、点击”检查“按钮，检查程序有无常规错误。当程序下载完成，如果程序是错误的，micro:bit屏幕也会出现相应错误信息。
-4、点击”刷入“按钮，把编写好的micro:bit程序下载到micro:bit主板，micro:bit主板指示灯闪烁表示程序正在下载，当闪烁结束的时候，如果micro:bit屏幕没有错误信息，表示程序下载成功。
+Motor control function description：**`motor_run(index,  speed)`**     #This function is the dc motor control function, and the index value is the Numbers 1, 2, 3 and 4, respectively representing the dc motor interfaces M1, M2, M3 and M4 of Magic:bit expansion board.The second parameter of the function, speed, is the speed value, with a value range of -250~250, plus or minus indicating the rotation direction.For example, if the speed of the dc motor that needs to be connected to the M2 pin of the extension plate is 150, then  **`motor_run(2, 150)`**  can be achieved.
 
-## Magic:bit库添加
+## Magic:bit controls the steering gear
 
-1、我的程序文件呢？人们有时很容易丢失他们的代码，所以Mu的默认文件位置始终为mu_code，mu_code的路径怎么找呢？当安装好Mu，点击”加载“按钮，加载出来的就是mu_code的文件路径，记住此路径，在以后的学习中需要添加库，就放到电脑的该路径的位置（每个电脑的路径会稍有不同）。![mu_package_1](Mu_python/mu_package_1.png)点击”加载“按钮
+Magic:bit is designed with 8 PWM steering gear interfaces S1, S2, S3, S4, S5, S6, S7 and S8.The Magic:bit library can be loaded to control the rotation of the PWM steering gear through the Magic:bit expansion board.
+Routine experiment: control the PWM steering gear attached to pin S1 to rotate in a 2S cycle at 0° and 180° positions, as shown in the experimental routine program![mu_Magicbit_servo](Mu_python/mu_Magicbit_servo.png)
 
-![mu_package_2](Mu_python/mu_package_2.png)记下mu_code路径
+Magic:bit description of steering gear control function：**`servo(index, angle)`**         #This function is the steering gear control function, and the index value is Numbers 1, 2, 3, 4, 5, 6, 7 and 8, corresponding to the PWM interfaces S1, S2, S3, S4, S5, S6, S7 and S8 of the bit expansion board.The second parameter of the function Angle is the Angle value, and the value range is 0~180.For example, if the PWM servo attached to the extension board S1 pin needs to be rotated to the 150° position, then  **`servo(1, 150)`**  can be implemented.
 
-2、把Magic:bit库文件复制粘贴到mu_code文件内，结果如图![mu_package_3](Mu_python/mu_package_3.png)
+## Magic:bit controls stepper motor rotation
 
-3、打开Mu软件，点击”文件“按钮，通过拖拽，把电脑中的文件拖拽到BBC micro:bit中，当micro:bit主板的指示灯闪烁结束的时候，表示Magic:bit库文件已经添加到micro:bit主板，可以通过from Magicbit import * 来使用Magicbit库了，需要注意的是，在调用库的时候要确保Magicbit库在microbit主板内，因为microbit库文件不是一次下载就永远存在的。
+Magic:bit has two Stepper motor interfaces, Stepper moto 1 and Stepper moto 2.The Magic:bit library can be loaded to control the rotation of the 28byj-48 stepper motor through the Magic:bit expansion board.
+Routine experiment: control the Stepper motor connected to the Stepper moto 1 pin to rotate 2S 90° apart. The routine program is shown in the figure ![mu_Magicbit_steppingmotor](Mu_python/mu_Magicbit_steppingmotor.png)
 
-## Magic:bit板载无源蜂鸣器播放音乐
-Magic:bit板载一个无源蜂鸣器(默认通过跳线帽接在micro:bit主板 P0 引脚)，可以通过对micro:bit主板编写相应的程序来控制这个无源蜂鸣器播放音乐，在通过Mu编写micropython控制程序之前，需要先了解一下microbit控制音乐的python编写语言  [中文版教程](http://www.qingchuangzhiyi.com/doc/music.html), [英文版教程](https://microbit-micropython.readthedocs.io/en/latest/tutorials/music.html)
-例程实验：控制 Magic:bit间隔1S播放 FUNK 音乐![mu_Magicbit_music](Mu_python/mu_music.png)
+Stepper motor control function description：**`stepper_degree(index, degree)`**       #This function is the Stepper motor control function, and the index value is the Numbers 1 and 2, respectively corresponding to the Stepper motor interfaces of Magic: Stepper moto 1 and Stepper moto 2 of bit expansion board.The second parameter degree of the function is the rotation Angle value of the stepper motor, and the value range is -360~360, indicating the rotation direction.For example, if the Stepper motor connected to the Stepper moto 1 pin needs to rotate 80°, it can be achieved through **`stepper_degree(1, 80)`**.
 
-## Magic:bit板载RGB灯闪烁
-Magic:bit板载有4颗RGB全彩灯(默认接在micro:bit主板 P16 引脚)，可以通过对micro:bit主板编写相应的程序来控制这4颗RGB全彩灯，BBC micropython控制相应的RGB灯控制，可以通过 [中文版教程](http://www.qingchuangzhiyi.com/doc/neopixel.html) 或 [英文版教程](https://microbit-micropython.readthedocs.io/en/latest/neopixel.html) 学习更多关于如何控制RGB灯的知识
-例程实验：控制 Magic:bit板载RGB灯闪烁![mu_Magicbit_RGB](Mu_python/mu_Magicbit_RGB.png)
+## Magic:bit controls RGB ultrasound
 
-## Magic:bit控制电机转动
+Magic:bit is designed with an RGB ultrasonic interface that can load the Magic:bit library to control RGB ultrasonic wave or ordinary ultrasonic wave through the Magic:bit expansion board to detect the distance of obstacles ahead.
+Routine experiment: detect the distance of obstacles in front by RGB ultrasonic wave and print. After clicking "brush in" button, click "REPL" button immediately, and the distance value will be printed below Mu. The experimental routine is shown in the figure![mu_Magicbit_RGBUT](Mu_python/mu_Magicbit_RGBUT.png)
 
-Magic:bit设计有四个直流电机接口M1，M2，M3，M4，可以加载Magic:bit库，从而通过Magic:bit扩展板控制直流电机转动。
-例程实验：控制四个直流电机转动，实验例程程序如图所示![mu_Magicbit_motor](Mu_python/mu_Magicbit_motor.png)
-
-Magic:bit电机控制函数说明：motor_run(index,  speed)     #该函数为直流电机控制函数，index的值为数字1、2、3、4，分别代表Magic:bit扩展板的直流电机接口M1、M2、M3、M4。函数的第二个参数 speed 为速度值，取值范围为-250~250，正负表示旋转方向。例如：假如需要接在扩展板 M2引脚的直流电机速度为 150，那么通过 motor_run(2, 150) 就可以实现。
-
-## Magic:bit控制舵机转动
-
-Magic:bit设计有8个PWM舵机接口S1、S2、S3、S4、S5、S6、S7、S8。可以加载Magic:bit库，从而通过Magic:bit扩展板控制PWM舵机的转动。
-例程实验：控制接在S1引脚的PWM舵机在0°和180°位置间隔2S循环转动，实验例程程序如图所示![mu_Magicbit_servo](Mu_python/mu_Magicbit_servo.png)
-
-Magic:bit舵机控制函数说明：servo(index, angle)         #该函数为舵机控制函数，index的值为数字1、2、3、4、5、6、7、8，分别对应Magic:bit扩展板的PWM接口S1、S2、S3、S4、S5、S6、S7、S8。函数的第二个参数 angle 为角度值，取值范围为 0~180。例如：假如需要接在扩展板 S1 引脚的PWM舵机转动到150°位置，那么通过 servo(1, 150) 就可以是实现。
-
-## Magic:bit控制步进电机转动
-
-Magic:bit设计有两个步进电机接口Stepper moto 1、Stepper moto 2。可以加载Magic:bit库，从而通过Magic:bit扩展板控制 28BYJ-48步进电机的转动。
-例程实验：控制接在Stepper moto 1引脚的步进电机间隔2S转动90°，实验例程程序如图所示 ![mu_Magicbit_steppingmotor](Mu_python/mu_Magicbit_steppingmotor.png)
-
-Magic:bit步进电机控制函数说明：stepper_degree(index, degree)       #该函数为步进电机控制函数，index 的值为数字1、2，分别对应Magic:bit扩展板的Stepper moto 1、Stepper moto 2步进电机接口。函数的第二个参数 degree 为步进电机转动角度值，取值范围为 -360~360，正负表示转动方向。例如：假如需要接在Stepper moto 1引脚的步进电机转动 80°，那么通过 stepper_degree(1, 80) 就可以实现。
-
-## Magic:bit控制RGB超声波
-
-Magic:bit设计有一个RGB超声波接口，可以加载Magic:bit库，从而通过Magic:bit扩展板控制 RGB 超声波或者普通超声波，检测前方障碍物的距离。
-例程实验：通过RGB超声波检测前方障碍物距离并打印，当点击"刷入"按钮后，立即点击”REPL“按钮，Mu的下面就会打印距离值，实验例程程序如图所示![mu_Magicbit_RGBUT](Mu_python/mu_Magicbit_RGBUT.png)
-
-Magic:bit超声波控制函数说明：get_UTdistance(trig, echo)        #该函数为超声波距离检测函数，会返回检测到的前方障碍物距离(cm) 。trig 代表的是超声波的发送引脚，echo 代表的是超声波的接收引脚。trig 与 echo 的取值为字符串’P0‘、’P1‘、’P2‘、’P8‘、’P12‘、’P13‘、’P14‘、’P15‘分别对应扩展板的P0、P1、P2、P8、P12、P13、P14、P15引脚。当使用RGB超声波时，trig 与 echo 均为 ’P2‘；当使用普通超声波时，两个引脚的选择根据实际连接情况进行选择。例如：使用普通超声波，超声波的 echo 引脚接在了扩展板P2 引脚、trig 引脚接在了扩展板的 P8 引脚，那么通过 get_UTdistance(’P8‘, ’P2‘) 就可以实现距离的检测
-
+Description of ultrasonic control function：**`get_UTdistance(trig, echo)`**       #This function is the ultrasonic distance detection function, which will return the detected distance (cm) of the front obstacle.The trig represents the sending pin of the ultrasonic wave, and the echo represents the receiving pin of the ultrasonic wave.The values of trig and echo are strings' P0 ', 'P1', 'P2', 'P8', 'P12', 'P13', 'P14' and 'P15', respectively, corresponding to P0, P1, P2, P8, P12, P13, P14 and P15 pins of the expansion board.When using RGB ultrasound, both trig and echo are 'P2';When normal ultrasound is used, the choice of two pins is based on the actual connection.For example, with ordinary ultrasonic, ultrasonic echo pin is connected to the expansion plate P2 pin and trig pin is connected to the expansion plate P8 pin, then distance detection can be achieved by **`get_UTdistance('P8', 'P2')`**
 
 
 

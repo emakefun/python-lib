@@ -113,7 +113,7 @@ def stop_pwm_more(start, end): #start:1~16,end>=start
 def stop_car():
     stop_pwm_more(1, 9)
 
-def get_UTdistance(trig, echo): #trig/echo:P0、P1、P2、P8、P12、P13、P14、P15
+def get_UTdistance(trig, echo): #trig/echo:'P0'、'P1'、'P2'、'P8'、'P12'、'P13'、'P14'、'P15'
     pins[echo].write_digital(0)
     utime.sleep_us(2)
     pins[trig].write_digital(1)
