@@ -85,5 +85,9 @@ Routine experiment: detect the distance of obstacles in front by RGB ultrasonic 
 
 Description of ultrasonic control function：**`get_UTdistance(trig, echo)`**       #This function is the ultrasonic distance detection function, which will return the detected distance (cm) of the front obstacle.The trig represents the sending pin of the ultrasonic wave, and the echo represents the receiving pin of the ultrasonic wave.The values of trig and echo are strings' P0 ', 'P1', 'P2', 'P8', 'P12', 'P13', 'P14' and 'P15', respectively, corresponding to P0, P1, P2, P8, P12, P13, P14 and P15 pins of the expansion board.When using RGB ultrasound, both trig and echo are 'P2';When normal ultrasound is used, the choice of two pins is based on the actual connection.For example, with ordinary ultrasonic, ultrasonic echo pin is connected to the expansion plate P2 pin and trig pin is connected to the expansion plate P8 pin, then distance detection can be achieved by **`get_UTdistance('P8', 'P2')`**
 
+# Please Contact Us
+Technical support email: support@emakefun.com</br>
+Sales email: support@keywish-robot.com</br>
+
 
 
