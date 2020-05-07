@@ -87,8 +87,8 @@ Description of ultrasonic control function：**`get_UTdistance(trig, echo)`**   
 
 # Please Contact Us
 Technical support email: support@emakefun.com</br>
-Sales email: ken@makefun.com</br>
-The latest information download address:https://github.com/emakefun/python-lib/edit/master/README.md   </br>
+Sales email: ken@emakefun.com</br>
+The latest information download address:https://github.com/emakefun/starter-bot  </br>
 
 
 
