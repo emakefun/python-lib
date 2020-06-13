@@ -1,4 +1,4 @@
-# Mu  and  Magic:bit
+# Mu  and  motor python library
 
 ## What is the Mu ？
 Mu is a simple python integrated development environment, can help the user to compile some controller and processor, the function of software interface is simple, open the software can choose four modes after editing, support for python 3, Pygame Zero, the BBC MICRO: BIT, ADAFRUIT CIRCUITPYTHON, choose a mode can into the editing interface, you can directly edit the code in the software, can also by loading. PY or. Hex file to the software debugging, very practical!And the software provides a graphical debugger tool.Suitable for primary and secondary students Python learners.
@@ -47,7 +47,9 @@ Write down the mu code path
 
 ![mu_package_3](Mu_python/mu_package_3.png)
 
-- Open Mu software, click on the "file" button, drag and drop, the computer files in the drag and drop to the BBC micro: bit, when micro: bit the mainboard of the end of the indicator lights flashing, said Magic: bit library files have been added to the micro: bit the mainboard, can pass the    from Magicbit import *    to use the Magicbit library, it is important to note that at the time of call library to ensure Magicbit library within microbit motherboard,Because microbit library files don't last forever after a single download.
+- Open Mu software, click on the "file" button, drag and drop, the computer files in the drag and drop to the BBC micro: bit, when micro: bit the mainboard of the end of the indicator lights flashing, said Magic: bit library files have been added to the micro: bit the mainboard, can pass the  import Magicbit   to use the Magicbit library, it is important to note that at the time of call library to ensure Magicbit library within microbit motherboard,Because microbit library files don't last forever after a single download.
+
+  
 
 ## The onboard passive buzzer plays music
 Magic:bit contains a passive buzzer (connected to micro:bit motherboard P0 pin by default via jumper cap). You can control this passive buzzer to play music by writing corresponding programs on micro:bit motherboard. Before writing micropython control program through Mu, you need to know the python programming language of microbit control music [English version](https://microbit-micropython.readthedocs.io/en/latest/tutorials/music.html)
